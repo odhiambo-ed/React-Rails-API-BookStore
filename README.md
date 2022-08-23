@@ -1,24 +1,67 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# React Rails API BookStore
 
-Things you may want to cover:
+This is a BookStore CRUD App build on Rails API and React. It has a fully functional website that shows the list of Books and enable user to interact with them by adding , updaditng and deleting.
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+## Demo Link
 
-* Database creation
+[Live Link]()
 
-* Database initialization
 
-* How to run the test suite
+## Built With
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+![Ruby](https://icongr.am/devicon/ruby-original.svg?size=50&color=currentColor)
+![Ruby on Rails](https://icongr.am/devicon/rails-original-wordmark.svg?size=50&color=currentColor)
 
-* ...
+## Get Started
+
+### Run
+
+```
+To get a clone of the project, run `git clone https://github.com/white3d/React-Rails-API-BookStore.git`
+```
+
+```
+cd /React-Rails-API-BookStore
+```
+
+
+### Available Scripts
+
+Gets all the required dependencies of the projects.
+
+**`bundle install`**
+
+For more details, see [the Installation docs page](https://www.ruby-lang.org/en/).
+
+## Authors
+
+👤 **Edward Odhiambo**
+
+- GitHub: [@whit3d](https://github.com/white3d)
+- Twitter: [@odhiambo_ed](https://twitter.com/odhiambo_ed)
+- LinkedIn: [Edward Odhiambo](https://www.linkedin.com/in/edward-odhiambo-6a462a21b/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!!
+
+Feel free to check the [issues page](https://github.com/white3d/React-Rails-API-BookStore/issues)
+
+## Show your support
+
+Give a ⭐️ if you like this project!!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
