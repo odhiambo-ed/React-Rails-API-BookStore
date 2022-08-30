@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Book from "./Book";
-import NewBookForm from "./BookForm";
+import BookBook from "./BookForm";
+import EditBookForm from "./EditBookForm";
 
 export default class BooksContainer extends Component {
     constructor(props) {
@@ -76,11 +77,28 @@ export default class BooksContainer extends Component {
 
     render() {
         return (
-            <div>
+            <div className="books-container">
                 {this.state.books.map((book) => {
-                    return <Book book={book} key={book.id} onRemoveBook={this.removeBook} />;
+                    if (this.state.editingBookId === book.id) {
+                        return (
+                            <EditBookForm
+                                book={book}
+                                key={book.id}
+                                editBook={this.editBook}
+                            />
+                        );
+                    } else {
+                        return (
+                            <Book
+                                book={book}
+                                key={book.id}
+                                onRemoveBook={this.removeBook}
+                                editingBook={this.editingBook}
+                            />
+                        );
+                    }
                 })}
-                <NewBookForm onNewBook={this.addBook} />
+                <BookBook onNewBook={this.addBook} />
             </div>
         );
     }
