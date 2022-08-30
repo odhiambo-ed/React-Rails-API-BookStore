@@ -36,6 +36,11 @@ class Api::V1::BooksController < ApplicationController
   # DELETE /books/1
   def destroy
     @book.destroy
+    if @book.destroy
+      head :no_content, status: :ok
+    else
+      render json: @book.errors, status: :unprocessable_entity
+    end
   end
 
   private

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Book from "./Book";
+import NewBookForm from "./BookForm";
 
 export default class BooksContainer extends Component {
     constructor(props) {
@@ -8,6 +9,8 @@ export default class BooksContainer extends Component {
         this.state = {
             books: [],
         };
+        this.addBook = this.addBook.bind(this);
+        this.removeBook = this.removeBook.bind(this);
     }
 
     componentDidMount() {
@@ -35,13 +38,23 @@ export default class BooksContainer extends Component {
             });
     }
 
+    removeBook(id) {
+        axios
+            .delete("/api/v1/books/" + id)
+            .then((response) => {
+                const books = this.state.books.filter((book) => book.id !== id);
+                this.setState({ books });
+            })
+            .catch((error) => console.log(error));
+    }
+
     render() {
         return (
             <div>
                 {this.state.books.map((book) => {
-                    return <Book book={book} key={book.id} />;
+                    return <Book book={book} key={book.id} onRemoveBook={this.removeBook} />;
                 })}
-                <BookForm onNewBook={this.addBook} />
+                <NewBookForm onNewBook={this.addBook} />
             </div>
         );
     }
