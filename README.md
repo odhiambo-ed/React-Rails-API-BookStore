@@ -16,6 +16,7 @@ This is a BookStore CRUD App build on Rails API and React. It has a fully functi
 
 ![Ruby](https://icongr.am/devicon/ruby-original.svg?size=50&color=currentColor)
 ![Ruby on Rails](https://icongr.am/devicon/rails-original-wordmark.svg?size=50&color=currentColor)
+![PostgreSQL](https://icongr.am/devicon/postgresql-original.svg?size=50&color=currentColor)
 
 ## Get Started
 
