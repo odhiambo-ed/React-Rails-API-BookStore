@@ -8,7 +8,7 @@ This is a BookStore CRUD App build on Rails API and React. It has a fully functi
 
 ## Demo Link
 
-[Live Link]()
+[Live Link](https://edward-react-rails-bookstore.herokuapp.com/)
 
 
 ## Built With
