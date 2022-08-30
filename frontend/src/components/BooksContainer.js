@@ -48,6 +48,32 @@ export default class BooksContainer extends Component {
             .catch((error) => console.log(error));
     }
 
+    editingBook(id) {
+        this.setState({
+            editingBookId: id,
+        });
+    }
+
+    editBook(id, title, excerpt) {
+        axios
+            .put("/api/v1/books/" + id, {
+                book: {
+                    title,
+                    excerpt,
+                },
+            })
+            .then((response) => {
+                console.log(response);
+                const books = this.state.books;
+                books[id - 1] = { id, title, excerpt };
+                this.setState(() => ({
+                    books,
+                    editingBookId: null,
+                }));
+            })
+            .catch((error) => console.log(error));
+    }
+
     render() {
         return (
             <div>
