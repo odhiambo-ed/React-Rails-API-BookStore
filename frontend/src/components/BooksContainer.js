@@ -1,17 +1,19 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Book from "./Book";
-import BookBook from "./BookForm";
+import BookForm from "./BookForm";
 import EditBookForm from "./EditBookForm";
-
 export default class BooksContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
             books: [],
+            editingBookId: null,
         };
         this.addBook = this.addBook.bind(this);
         this.removeBook = this.removeBook.bind(this);
+        this.editingBook = this.editingBook.bind(this);
+        this.editBook = this.editBook.bind(this);
     }
 
     componentDidMount() {
@@ -26,9 +28,9 @@ export default class BooksContainer extends Component {
             .catch((error) => console.log(error));
     }
 
-    addBook(title, excerpt) {
+    addBook(title, author, genre) {
         axios
-            .post("/api/v1/books", { book: { title, excerpt } })
+            .post("/api/v1/books", { book: { title, author, genre } })
             .then((response) => {
                 console.log(response);
                 const books = [...this.state.books, response.data];
@@ -55,18 +57,19 @@ export default class BooksContainer extends Component {
         });
     }
 
-    editBook(id, title, excerpt) {
+    editBook(id, title, author, genre) {
         axios
             .put("/api/v1/books/" + id, {
                 book: {
                     title,
-                    excerpt,
+                    author,
+                    genre,
                 },
             })
             .then((response) => {
                 console.log(response);
                 const books = this.state.books;
-                books[id - 1] = { id, title, excerpt };
+                books[id - 1] = { id, title, author, genre };
                 this.setState(() => ({
                     books,
                     editingBookId: null,
@@ -77,7 +80,7 @@ export default class BooksContainer extends Component {
 
     render() {
         return (
-            <div className="books-container">
+            <div>
                 {this.state.books.map((book) => {
                     if (this.state.editingBookId === book.id) {
                         return (
@@ -98,7 +101,7 @@ export default class BooksContainer extends Component {
                         );
                     }
                 })}
-                <BookBook onNewBook={this.addBook} />
+                <BookForm onNewBook={this.addBook} />
             </div>
         );
     }
