@@ -22,12 +22,26 @@ export default class BooksContainer extends Component {
             .catch((error) => console.log(error));
     }
 
+    addBook(title, excerpt) {
+        axios
+            .post("/api/v1/books", { book: { title, excerpt } })
+            .then((response) => {
+                console.log(response);
+                const books = [...this.state.books, response.data];
+                this.setState({ books });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+
     render() {
         return (
             <div>
                 {this.state.books.map((book) => {
                     return <Book book={book} key={book.id} />;
                 })}
+                <BookForm onNewBook={this.addBook} />
             </div>
         );
     }
