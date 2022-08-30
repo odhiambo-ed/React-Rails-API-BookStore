@@ -1,9 +1,10 @@
 import './App.css';
+import BooksContainer from './components/BooksContainer';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello React and Rails</h1>
+      <BooksContainer />
     </div>
   );
 }
