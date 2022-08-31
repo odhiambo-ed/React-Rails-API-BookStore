@@ -12,7 +12,7 @@ const BookForm = ({ onNewBook = (f) => f }) => {
     };
 
     return (
-        <form className="border rounded" onSubmit={submit}>
+        <form className="border rounded mt-4 mb-2" onSubmit={submit}>
 
             <div className="form-row d-flex flex-row">
                 <div className="col-3 m-4">

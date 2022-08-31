@@ -10,7 +10,7 @@ const Nav = () => {
                 <a className="navbar-brand">Edward's BookStore</a>
                 <form className="d-flex flex-row form-inline">
                     <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <button className="btn btn-outline-success my-2 my-sm-0 m-2" type="submit">Search</button>
                 </form>
             </nav>
         </div>
