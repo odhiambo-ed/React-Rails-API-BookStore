@@ -5,8 +5,8 @@ import React from 'react'
 
 const Nav = () => {
     return (
-        <div>
-            <nav className="navbar navbar-light bg-light justify-content-between">
+        <div className="nav-color p-2">
+            <nav className="navbar navbar-light justify-content-between">
                 <a className="navbar-brand">Edward's BookStore</a>
                 <form className="d-flex flex-row form-inline">
                     <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />

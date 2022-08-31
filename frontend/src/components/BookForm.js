@@ -12,26 +12,40 @@ const BookForm = ({ onNewBook = (f) => f }) => {
     };
 
     return (
-        <form onSubmit={submit}>
-            <input
-                ref={(input) => (_title = input)}
-                type="text"
-                placeholder="Title"
-                required
-            />
-            <input
-                ref={(input) => (_author = input)}
-                type="text"
-                placeholder="Author"
-                required
-            />
-            <input
-                ref={(input) => (_genre = input)}
-                type="text"
-                placeholder="Genre"
-                required
-            />
-            <button>Add Book</button>
+        <form className="border rounded" onSubmit={submit}>
+
+            <div className="form-row d-flex flex-row">
+                <div className="col-3 m-4">
+                    <input
+                        className="form-control"
+                        ref={(input) => (_title = input)}
+                        type="text"
+                        placeholder="Title"
+                        required
+                    />
+                </div>
+                <div className="col-3 m-4">
+                    <input
+                        className="form-control"
+                        ref={(input) => (_author = input)}
+                        type="text"
+                        placeholder="Author"
+                        required
+                    />
+                </div>
+                <div className="col-3 m-4">
+                    <input
+                        className="form-control"
+                        ref={(input) => (_genre = input)}
+                        type="text"
+                        placeholder="Genre"
+                        required
+                    />
+                </div>
+                <div className="col-3 m-4">
+                    <button className="btn btn-primary mb-2">Add Book</button>
+                </div>
+            </div>
         </form>
     );
 };

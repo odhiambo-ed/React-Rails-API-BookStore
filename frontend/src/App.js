@@ -4,9 +4,9 @@ import Nav from './components/Nav'
 
 function App() {
   return (
-    <div className='container-fluid'>
+    <div>
       <Nav />
-      <div className="container mt-2">
+      <div className='container-fluid bg-light'>
         <BooksContainer />
       </div>
     </div>

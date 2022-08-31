@@ -80,28 +80,35 @@ export default class BooksContainer extends Component {
 
     render() {
         return (
-            <div>
-                {this.state.books.map((book) => {
-                    if (this.state.editingBookId === book.id) {
-                        return (
-                            <EditBookForm
-                                book={book}
-                                key={book.id}
-                                editBook={this.editBook}
-                            />
-                        );
-                    } else {
-                        return (
-                            <Book
-                                book={book}
-                                key={book.id}
-                                onRemoveBook={this.removeBook}
-                                editingBook={this.editingBook}
-                            />
-                        );
-                    }
-                })}
+            <div>                
                 <BookForm onNewBook={this.addBook} />
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-8">
+                            {this.state.books.map((book) => {
+                                if (this.state.editingBookId === book.id) {
+                                    return (
+                                        <EditBookForm
+                                            book={book}
+                                            key={book.id}
+                                            editBook={this.editBook}
+                                        />
+                                    );
+                                } else {
+                                    return (
+                                        <Book
+                                            book={book}
+                                            key={book.id}
+                                            onRemoveBook={this.removeBook}
+                                            editingBook={this.editingBook}
+                                        />
+                                    );
+                                }
+                            })}
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         );
     }
