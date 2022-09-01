@@ -30,31 +30,39 @@ export default class EditBookForm extends Component {
                 autocomplete="off"
                 onSubmit={this.handleSubmit}
             >
-                <input
-                    className="form-control"
-                    name="title"
-                    type="text"
-                    placeholder="Title"
-                    value={this.state.title}
-                    onChange={this.handleChange}
-                />
-                <input
-                    className="form-control"
-                    name="author"
-                    type="text"
-                    placeholder="Author"
-                    value={this.state.author}
-                    onChange={this.handleChange}
-                />
-                <input
-                    className="form-control"
-                    name="genre"
-                    type="text"
-                    placeholder="Genre"
-                    value={this.state.genre}
-                    onChange={this.handleChange}
-                />
-                <button className="btn btn-success">Update Book</button>
+                <div className="d-flex flex-column m-4">
+                        <input
+                            className="form-control mt-2"
+                            name="title"
+                            type="text"
+                            placeholder="Title"
+                            value={this.state.title}
+                            onChange={this.handleChange}
+                        />
+
+                        <input
+                            className="form-control mt-2"
+                            name="author"
+                            type="text"
+                            placeholder="Author"
+                            value={this.state.author}
+                            onChange={this.handleChange}
+                        />
+
+                        <input
+                            className="form-control mt-2"
+                            name="genre"
+                            type="text"
+                            placeholder="Genre"
+                            value={this.state.genre}
+                            onChange={this.handleChange}
+                        />
+
+                        <button className="btn btn-success mt-2">Update Book</button>
+                </div>         
+                
+                
+                
             </form>
         );
     }
