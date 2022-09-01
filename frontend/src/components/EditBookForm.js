@@ -26,11 +26,12 @@ export default class EditBookForm extends Component {
     render() {
         return (
             <form
-                className="edit-form"
+                className=" form-group border rounded mt-4 mb-2"
                 autocomplete="off"
                 onSubmit={this.handleSubmit}
             >
                 <input
+                    className="form-control"
                     name="title"
                     type="text"
                     placeholder="Title"
@@ -38,6 +39,7 @@ export default class EditBookForm extends Component {
                     onChange={this.handleChange}
                 />
                 <input
+                    className="form-control"
                     name="author"
                     type="text"
                     placeholder="Author"
@@ -45,13 +47,14 @@ export default class EditBookForm extends Component {
                     onChange={this.handleChange}
                 />
                 <input
+                    className="form-control"
                     name="genre"
                     type="text"
                     placeholder="Genre"
                     value={this.state.genre}
                     onChange={this.handleChange}
                 />
-                <button>Update Book</button>
+                <button className="btn btn-success">Update Book</button>
             </form>
         );
     }
