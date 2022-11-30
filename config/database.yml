@@ -85,7 +85,6 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
   database: React_Rails_API_BookStore_production
   username: React_Rails_API_BookStore
   password: <%= ENV["REACT_RAILS_API_BOOKSTORE_DATABASE_PASSWORD"] %>
