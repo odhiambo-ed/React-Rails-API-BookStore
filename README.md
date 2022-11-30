@@ -27,7 +27,7 @@
 ![Ruby](https://icongr.am/devicon/ruby-original.svg?size=100&color=currentColor)
 ![Ruby on Rails](https://icongr.am/devicon/rails-original-wordmark.svg?size=100&color=currentColor)
 ![PostgreSQL](https://icongr.am/devicon/postgresql-original.svg?size=100&color=currentColor)
-![React](https://icongr.am/devicon/react-original.svg?size=100&color=currentColor)
+![React](https://icongr.am/devicon/react-original.svg?size=80&color=currentColor)
 
 ## Get Started
 
